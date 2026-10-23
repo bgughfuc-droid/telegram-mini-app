@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Telegram App</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 30px 15px;
+  background: #eaf5ff;
+}
+button {
+  padding: 14px 24px;
+  background: #229ED9;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  font-size: 18px;
+}
+</style>
+</head>
+<body>
+<h2>আমার Telegram অ্যাপ</h2>
+<p id="msg">স্বাগতম!</p>
+<button onclick="startApp()">শুরু করুন</button>
+<script>
+const tg = window.Telegram.WebApp;
+tg.ready();
+function startApp() {
+  document.getElementById("msg").textContent =
+    "আপনার অ্যাপে স্বাগতম!";
+}
+</script>
+</body>
+</html>
